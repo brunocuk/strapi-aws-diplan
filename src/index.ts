@@ -1,20 +1,35 @@
-// import type { Core } from '@strapi/strapi';
-
 export default {
-  /**
-   * An asynchronous register function that runs before
-   * your application is initialized.
-   *
-   * This gives you an opportunity to extend code.
-   */
-  register(/* { strapi }: { strapi: Core.Strapi } */) {},
+  register(/* { strapi } */) {
+    // Registration logic if needed
+  },
 
-  /**
-   * An asynchronous bootstrap function that runs before
-   * your application gets started.
-   *
-   * This gives you an opportunity to set up your data model,
-   * run jobs, or perform some special logic.
-   */
-  bootstrap(/* { strapi }: { strapi: Core.Strapi } */) {},
+  bootstrap({ strapi }) {
+    // Configure S3 upload after Strapi initializes
+    console.log('=== BOOTSTRAP S3 CONFIG ===');
+    console.log('AWS_ACCESS_KEY_ID available:', process.env.AWS_ACCESS_KEY_ID ? 'YES' : 'NO');
+    console.log('AWS_BUCKET available:', process.env.AWS_BUCKET ? 'YES' : 'NO');
+    
+    if (process.env.AWS_ACCESS_KEY_ID && process.env.AWS_BUCKET) {
+      // Override the upload plugin configuration
+      strapi.config.set('plugin::upload', {
+        provider: 'aws-s3',
+        providerOptions: {
+          s3Options: {
+            accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+            secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+            region: process.env.AWS_REGION,
+            params: {
+              Bucket: process.env.AWS_BUCKET,
+              ACL: 'public-read',
+            },
+          },
+        },
+      });
+      
+      console.log('S3 upload configuration applied');
+    } else {
+      console.log('AWS environment variables missing, using default upload');
+    }
+    console.log('=== END BOOTSTRAP CONFIG ===');
+  },
 };
