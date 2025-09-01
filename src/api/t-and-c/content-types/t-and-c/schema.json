@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "t_and_cs",
+  "info": {
+    "singularName": "t-and-c",
+    "pluralName": "t-and-cs",
+    "displayName": "T&C"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

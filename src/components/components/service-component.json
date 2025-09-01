@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_components_service_components",
+  "info": {
+    "displayName": "serviceComponent",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "benefits": {
+      "type": "string"
+    },
+    "benefitOne": {
+      "type": "string"
+    },
+    "benefitTwo": {
+      "type": "string"
+    },
+    "benefitThree": {
+      "type": "string"
+    },
+    "benefitFour": {
+      "type": "string"
+    },
+    "serviceImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slugOfService": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

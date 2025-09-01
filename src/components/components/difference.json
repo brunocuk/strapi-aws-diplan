@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_differences",
+  "info": {
+    "displayName": "difference",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subText": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

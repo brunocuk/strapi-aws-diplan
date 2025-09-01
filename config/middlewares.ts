@@ -1,9 +1,6 @@
-// ~/strapi-aws-s3/backend/config/middlewares.ts
-
 export default [
+  'strapi::logger',
   'strapi::errors',
-  /* Replace 'strapi::security', with this snippet */
-  /* Beginning of snippet */
   {
     name: 'strapi::security',
     config: {
@@ -15,14 +12,14 @@ export default [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
+            'market-assets.strapi.io',
             'diplan-strapi-aws-s3-images-bucket.s3.eu-north-1.amazonaws.com',
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
+            'market-assets.strapi.io',
             'diplan-strapi-aws-s3-images-bucket.s3.eu-north-1.amazonaws.com',
           ],
           upgradeInsecureRequests: null,
@@ -30,10 +27,8 @@ export default [
       },
     },
   },
-  /* End of snippet */
   'strapi::cors',
   'strapi::poweredBy',
-  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',

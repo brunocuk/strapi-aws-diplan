@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_components_service_benefits",
+  "info": {
+    "displayName": "serviceBenefits",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "benefitImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "benefitTitle": {
+      "type": "string"
+    },
+    "benefitText": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

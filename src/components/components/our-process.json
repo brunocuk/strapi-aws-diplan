@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_components_our_processes",
+  "info": {
+    "displayName": "ourProcess",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "step": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
