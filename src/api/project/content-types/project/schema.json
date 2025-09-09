@@ -127,6 +127,20 @@
           "localized": false
         }
       }
+    },
+    "whichService": {
+      "type": "enumeration",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "enum": [
+        "ARHITEKTURA",
+        "STATIKA",
+        "ENERGETSKA",
+        "NADZOR"
+      ]
     }
   }
 }
