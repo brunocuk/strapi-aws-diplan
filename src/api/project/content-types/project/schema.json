@@ -119,6 +119,14 @@
       },
       "component": "components.seo-component",
       "repeatable": false
+    },
+    "sortirniBroj": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
