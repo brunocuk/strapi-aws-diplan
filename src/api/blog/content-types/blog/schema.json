@@ -88,6 +88,14 @@
       },
       "component": "components.seo-component",
       "repeatable": false
+    },
+    "dateOfChoice": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
     }
   }
 }
